@@ -21,9 +21,9 @@ import org.springframework.transaction.PlatformTransactionManager;
  * @author: guoconglin
  * @date: 2017年5月10日 下午2:16:57
  */
-@EnableAutoConfiguration //此注释自动载入应用程序所需的所有Bean
-@SpringBootApplication  //注解他们的main类 @SpringBootApplication 注解等价于以默认属性使用 @Configuration ， @EnableAutoConfiguration 和 @ComponentScan 。
-@ComponentScan // 注解他们的main类
+//@EnableAutoConfiguration //Spring Boot根据添加的jar依赖猜测你想如何配置Spring。
+@SpringBootApplication  //注解添加到一个 @Configuration 类上来选择自动配置。same as @Configuration @EnableAutoConfiguration @ComponentScan  
+//@ComponentScan // @ComponentScan 注解自动收集所有的Spring组件
 @MapperScan("com.example.dao") //自动扫描。mybatis
 public class Application {
     /**
